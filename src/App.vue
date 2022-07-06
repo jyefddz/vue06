@@ -1,6 +1,9 @@
 <template>
   <div>
     <UseTable>
+      <template v-slot:name="scope">
+        <input v-model="scope.row.name">
+      </template>
       <template v-slot:age="scope">
         <input v-model="scope.row.age">
       </template>
@@ -14,18 +17,25 @@
         <span>{{ scope.row.headImgUrl }}</span>
       </template>
     </UseTable>
+    <br>
+    <hr>
+    <br>
+    <UserInfo></UserInfo>
+
   </div>
 </template>
 
 <script>
 import UseTable from './components/01/01_UseTable.vue'
+import UserInfo from './components/UserInfo.vue'
 export default {
   data() {
     return {
     }
   },
   components: {
-    UseTable
+    UseTable,
+    UserInfo,
   },
   computed: {
   }

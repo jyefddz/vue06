@@ -13,7 +13,9 @@
             <thead>
                 <tr v-for="(item, index) in list" :key="index">
                     <td>{{ index + 1 }}</td>
-                    <td>{{ item.name }}</td>
+                    <td>
+                        <slot name="name" :row="item"></slot>
+                    </td>
                     <td>
                         <slot name="age" :row="item"></slot>
                     </td>
