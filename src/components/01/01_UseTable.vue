@@ -19,14 +19,8 @@
                     <td>
                         <slot name="age" :row="item"></slot>
                     </td>
-                    <td v-if="item.type == 0">
+                    <td>
                         <slot name="toux" :row="item"></slot>
-                    </td>
-                    <td v-if="item.type == 1">
-                        <slot name="toux1" :row="item"></slot>
-                    </td>
-                    <td v-if="item.type == 2">
-                        <slot name="toux2" :row="item"></slot>
                     </td>
                 </tr>
             </thead>
